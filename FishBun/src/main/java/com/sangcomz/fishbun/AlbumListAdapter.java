@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.adapter.view;
+package com.sangcomz.fishbun;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,11 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.sangcomz.fishbun.Fishton;
-import com.sangcomz.fishbun.R;
 import com.sangcomz.fishbun.bean.Album;
 import com.sangcomz.fishbun.define.Define;
-import com.sangcomz.fishbun.ui.picker.PickerActivity;
 
 import java.util.List;
 
@@ -28,11 +25,11 @@ public class AlbumListAdapter
     private List<Album> albumList;
 
 
-    public AlbumListAdapter() {
+    AlbumListAdapter() {
         fishton = Fishton.getInstance();
     }
 
-    public void setAlbumList(List<Album> albumList) {
+    void setAlbumList(List<Album> albumList) {
         this.albumList = albumList;
 
     }
@@ -75,18 +72,18 @@ public class AlbumListAdapter
     }
 
 
-    public List<Album> getAlbumList() {
+    List<Album> getAlbumList() {
         return albumList;
     }
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         private View view;
         private ImageView imgAlbumThumb;
         private TextView txtAlbumName;
         private TextView txtAlbumCount;
 
-        public ViewHolder(View view, int albumSize) {
+        ViewHolder(View view, int albumSize) {
             super(view);
             this.view = view;
             imgAlbumThumb = view.findViewById(R.id.img_album_thumb);

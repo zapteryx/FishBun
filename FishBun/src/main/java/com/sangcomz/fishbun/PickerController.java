@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.ui.picker;
+package com.sangcomz.fishbun;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 /**
  * Created by sangc on 2015-11-05.
  */
-public class PickerController {
+class PickerController {
     private PickerActivity pickerActivity;
     private ArrayList<Uri> addImagePaths = new ArrayList<>();
     private ContentResolver resolver;
@@ -34,12 +34,12 @@ public class PickerController {
     }
 
 
-    public void takePicture(Activity activity, String saveDir) {
+    void takePicture(Activity activity, String saveDir) {
         cameraUtil.takePicture(activity, saveDir);
     }
 
 
-    public void setToolbarTitle(int total) {
+    void setToolbarTitle(int total) {
         pickerActivity.showToolbarTitle(total);
     }
 
@@ -51,15 +51,15 @@ public class PickerController {
         cameraUtil.setSavePath(savePath);
     }
 
-    public void setAddImagePath(Uri imagePath) {
+    void setAddImagePath(Uri imagePath) {
         this.addImagePaths.add(imagePath);
     }
 
-    protected ArrayList<Uri> getAddImagePaths() {
+    ArrayList<Uri> getAddImagePaths() {
         return addImagePaths;
     }
 
-    public void setAddImagePaths(ArrayList<Uri> addImagePaths) {
+    void setAddImagePaths(ArrayList<Uri> addImagePaths) {
         this.addImagePaths = addImagePaths;
     }
 
@@ -147,14 +147,14 @@ public class PickerController {
         return pathDir = path.replace("/" + fileName, "");
     }
 
-    public String getPathDir(Long bucketId) {
+    String getPathDir(Long bucketId) {
         if (pathDir.equals("") || bucketId == 0)
             pathDir = Environment.getExternalStoragePublicDirectory(
                     Environment.DIRECTORY_DCIM + "/Camera").getAbsolutePath();
         return pathDir;
     }
 
-    public void finishActivity() {
+    void finishActivity() {
         pickerActivity.finishActivity();
     }
 }

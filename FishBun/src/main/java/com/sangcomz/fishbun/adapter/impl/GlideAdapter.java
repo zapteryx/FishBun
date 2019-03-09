@@ -1,11 +1,11 @@
-package com.sangcomz.fishbun.adapter.image.impl;
+package com.sangcomz.fishbun.adapter.impl;
 
 import android.net.Uri;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.sangcomz.fishbun.adapter.image.ImageAdapter;
+import com.sangcomz.fishbun.adapter.ImageAdapter;
 
 /**
  * Created by sangcomz on 23/07/2017.

@@ -1,9 +1,9 @@
-package com.sangcomz.fishbun.adapter.image.impl;
+package com.sangcomz.fishbun.adapter.impl;
 
 import android.net.Uri;
 import android.widget.ImageView;
 
-import com.sangcomz.fishbun.adapter.image.ImageAdapter;
+import com.sangcomz.fishbun.adapter.ImageAdapter;
 import com.squareup.picasso.Picasso;
 
 /**

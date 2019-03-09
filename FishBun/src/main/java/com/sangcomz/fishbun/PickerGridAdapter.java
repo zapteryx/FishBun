@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.adapter.view;
+package com.sangcomz.fishbun;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,12 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.sangcomz.fishbun.Fishton;
-import com.sangcomz.fishbun.R;
 import com.sangcomz.fishbun.define.Define;
-import com.sangcomz.fishbun.ui.detail.DetailActivity;
-import com.sangcomz.fishbun.ui.picker.PickerActivity;
-import com.sangcomz.fishbun.ui.picker.PickerController;
 import com.sangcomz.fishbun.util.RadioWithTextButton;
 
 import java.util.ArrayList;
@@ -38,8 +33,8 @@ public class PickerGridAdapter
     private String saveDir;
 
 
-    public PickerGridAdapter(PickerController pickerController,
-                             String saveDir) {
+    PickerGridAdapter(PickerController pickerController,
+                      String saveDir) {
         this.pickerController = pickerController;
         this.saveDir = saveDir;
         this.fishton = Fishton.getInstance();

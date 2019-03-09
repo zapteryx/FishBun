@@ -3,7 +3,7 @@ package com.sangcomz.fishbun;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 
-import com.sangcomz.fishbun.adapter.image.ImageAdapter;
+import com.sangcomz.fishbun.adapter.ImageAdapter;
 
 import java.lang.ref.WeakReference;
 
@@ -23,12 +23,12 @@ public final class FishBun {
     }
 
 
-    FishBun(Activity activity, Fragment fragment) {
+    private FishBun(Activity activity, Fragment fragment) {
         this.activity = new WeakReference<>(activity);
         this.fragment = new WeakReference<>(fragment);
     }
 
-    public FishBunCreator setImageAdapter(ImageAdapter imageAdapter) {
+    public FishBunProperty setImageAdapter(ImageAdapter imageAdapter) {
         Fishton fishton = Fishton.getInstance();
         fishton.refresh();
 

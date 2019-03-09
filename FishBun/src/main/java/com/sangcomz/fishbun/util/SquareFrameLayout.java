@@ -2,11 +2,12 @@ package com.sangcomz.fishbun.util;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.FrameLayout;
 
 /**
  * Created by sangc on 2015-12-26.
  */
-public class SquareFrameLayout extends android.support.v7.widget.ContentFrameLayout {
+public class SquareFrameLayout extends FrameLayout {
     public SquareFrameLayout(Context context) {
         super(context);
     }

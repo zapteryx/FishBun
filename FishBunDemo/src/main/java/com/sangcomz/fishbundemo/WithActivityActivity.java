@@ -14,9 +14,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.sangcomz.fishbun.FishBun;
-import com.sangcomz.fishbun.FishBunCreator;
-import com.sangcomz.fishbun.adapter.image.impl.GlideAdapter;
-import com.sangcomz.fishbun.adapter.image.impl.PicassoAdapter;
+import com.sangcomz.fishbun.adapter.impl.GlideAdapter;
+import com.sangcomz.fishbun.adapter.impl.PicassoAdapter;
 import com.sangcomz.fishbun.define.Define;
 
 import java.util.ArrayList;
@@ -105,7 +104,7 @@ public class WithActivityActivity extends AppCompatActivity {
                 case 2: {
                     FishBun.with(WithActivityActivity.this)
                             .setImageAdapter(new PicassoAdapter())
-                            .setPickerCount(50)
+                            .setMaxCount(50)
                             .setPickerSpanCount(4)
                             .setActionBarColor(Color.parseColor("#ffffff"), Color.parseColor("#ffffff"), true)
                             .setActionBarTitleColor(Color.parseColor("#000000"))

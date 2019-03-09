@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.ui.picker;
+package com.sangcomz.fishbun;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,9 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.sangcomz.fishbun.BaseActivity;
-import com.sangcomz.fishbun.R;
-import com.sangcomz.fishbun.adapter.view.PickerGridAdapter;
 import com.sangcomz.fishbun.bean.Album;
 import com.sangcomz.fishbun.define.Define;
 import com.sangcomz.fishbun.permission.PermissionCheck;

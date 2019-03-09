@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.ui.detail;
+package com.sangcomz.fishbun;
 
 /**
  * Created by sangcomz on 11/06/2017.

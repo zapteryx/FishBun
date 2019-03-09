@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.ui.album;
+package com.sangcomz.fishbun;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -33,11 +33,9 @@ class AlbumController {
     boolean checkPermission() {
         PermissionCheck permissionCheck = new PermissionCheck(albumActivity);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (permissionCheck.CheckStoragePermission())
-                return true;
+            return permissionCheck.CheckStoragePermission();
         } else
             return true;
-        return false;
     }
 
     void getAlbumList(String allViewTitle,

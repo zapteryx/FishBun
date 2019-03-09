@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.adapter.view;
+package com.sangcomz.fishbun;
 
 import android.net.Uri;
 import android.support.constraint.ConstraintLayout;
@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sangcomz.fishbun.Fishton;
-import com.sangcomz.fishbun.R;
 import com.sangcomz.fishbun.util.TouchImageView;
 
 /**
@@ -22,7 +20,7 @@ public class DetailViewPagerAdapter extends PagerAdapter {
     private LayoutInflater inflater;
     private Uri[] images;
 
-    public DetailViewPagerAdapter(LayoutInflater inflater, Uri[] images) {
+    DetailViewPagerAdapter(LayoutInflater inflater, Uri[] images) {
         this.inflater = inflater;
         this.images = images;
         fishton = Fishton.getInstance();

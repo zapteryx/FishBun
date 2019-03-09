@@ -1,4 +1,4 @@
-package com.sangcomz.fishbun.adapter.image;
+package com.sangcomz.fishbun.adapter;
 
 import android.net.Uri;
 import android.widget.ImageView;
