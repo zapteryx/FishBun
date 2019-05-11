@@ -51,7 +51,7 @@ task sourcesJar(type: Jar) {
 }
 
 afterEvaluate {
-    javadoc.classpath += project.android.libraryVariants.toList().first().javaCompile.classpath
+    javadoc.classpath += project.android.libraryVariants.toList().first().getJavaCompiler().classpath
 }
 
 task javadoc(type: Javadoc) {

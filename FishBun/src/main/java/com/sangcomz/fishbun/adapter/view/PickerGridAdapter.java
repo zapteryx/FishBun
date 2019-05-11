@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.sangcomz.fishbun.Fishton;
 import com.sangcomz.fishbun.R;
@@ -103,6 +104,13 @@ public class PickerGridAdapter
             vh.imgThumbImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    onCheckStateChange(vh.item, image);
+                }
+            });
+
+            vh.imgThumbImage.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
                     if (fishton.isUseDetailView) {
                         if (context instanceof PickerActivity) {
                             PickerActivity activity = (PickerActivity) context;
@@ -112,6 +120,7 @@ public class PickerGridAdapter
                         }
                     } else
                         onCheckStateChange(vh.item, image);
+                    return true;
 
                 }
             });
@@ -141,6 +150,8 @@ public class PickerGridAdapter
             pickedImages.remove(image);
             btnThumbCount.unselect();
             animScale(imgThumbImage, false, true);
+            updateRadioButton(btnThumbCount,
+                    String.valueOf(fishton.selectedImages.indexOf(image) + 1));
         } else {
             animScale(imgThumbImage, true, true);
             pickedImages.add(image);
@@ -148,6 +159,7 @@ public class PickerGridAdapter
                     && fishton.maxCount == pickedImages.size()) {
                 pickerController.finishActivity();
             }
+            btnThumbCount.unselect();
             updateRadioButton(btnThumbCount, String.valueOf(pickedImages.size()));
         }
         pickerController.setToolbarTitle(pickedImages.size());
